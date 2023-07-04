@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black !important;
+            margin: 0;
+        }
+        #game-board {
+            background-color: #CCC;
+            width: 100vmin;
+            height: 100vmin;
+            display: grid;
+            grid-template-columns:repeat(24, 1fr);
+            grid-template-rows:repeat(24, 1fr);
+            border: solid rgb(221, 210, 1) 1px !important;
+        }
+        .snake {
+            background-color: hsl(50,100%,50%);
+            border: 0.25vmin solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-board">
+        <div class="snake"></div>
+        <div>hello</div>
+        <div>World</div>
+    </div>
+</body>
+</html>

@@ -13,7 +13,7 @@ function generateFood() {
   return foodPosition;
 }
 
-export function update(options) {
+export function update() {
   console.log(food);
   if (onSnake(food)) {
     expandSnake(EXPANSION_RATE);

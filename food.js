@@ -6,8 +6,8 @@ const EXPANSION_RATE = 1;
 
 function generateFood() {
   const foodPosition = {
-    x: Math.floor(Math.random() * 22),
-    y: Math.floor(Math.random() * 22),
+    x: Math.floor(Math.random() * 22) + 1,
+    y: Math.floor(Math.random() * 22) + 1,
   };
   if (foodPosition == null || onSnake(foodPosition)) return generateFood();
   return foodPosition;

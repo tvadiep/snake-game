@@ -12,6 +12,7 @@ import { update as updateFood, draw as drawFood } from "./food.js";
 
 let previousTime = 0;
 let gameOver = false;
+const gameBoard = document.getElementById("game-board");
 
 function main(currentTime) {
   if (gameOver) {
@@ -25,20 +26,21 @@ function main(currentTime) {
   let differ = (currentTime - previousTime) / 1000;
   if (differ < 1 / SNAKE_SPEED) return;
   previousTime = currentTime;
-  console.log(differ);
 
   update();
   draw();
 }
 
+window.requestAnimationFrame(main);
+
 function update() {
-  updateFood();
   updateSnake();
+  updateFood();
   checkDeath();
 }
 
 function draw() {
-  const gameBoard = document.getElementById("game-board");
+  gameBoard.innerHTML = "";
   drawSnake(gameBoard);
   drawFood(gameBoard);
 }
